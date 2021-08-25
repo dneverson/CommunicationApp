@@ -100,7 +100,7 @@ class Client {
         }
 
         /////// TBD DESCRIPTION ///////
-        void startSocket() {
+        void openSocket() {
             in  = socket(AF_INET, SOCK_DGRAM, 0);
             out = socket(AF_INET, SOCK_DGRAM, 0);
             server.sin_family = AF_INET;
@@ -140,7 +140,7 @@ int main( int argc, char* argv[]) {
     cout << client.getUserID() << " " << client.getRecvID() << " " << client.getServerIp() << " " << client.getServerPort() << endl;
 
     client.openWinsock();
-    client.startSocket();
+    client.openSocket();
 
     int exit = 0;
 
